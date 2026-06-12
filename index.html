@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Para Giovanna — Feliz Dia dos Namorados 💕</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <!-- Google Fonts: Playfair Display + Lato -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- ============================================================
+     CANVAS DE PARTÍCULAS (fundo global)
+     ============================================================ -->
+        <canvas id="particles-canvas"></canvas>
+
+        <!-- ============================================================
+     BOTÃO DE MÚSICA
+     Troque o caminho do áudio em: src="audio/saturno.mp3"
+     Coloque o arquivo de áudio na pasta "audio/" ao lado do index.html
+     ============================================================ -->
+        <div class="music-btn" id="musicBtn" title="Tocar nossa música">
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+            </svg>
+            <span>Nossa música</span>
+        </div>
+        <!-- Troque "audio/saturno.mp3" pelo caminho correto do arquivo -->
+        <audio id="bgMusic" loop>
+            <source
+                src="./audio/Mainstreet, BIN e Ajaxx - Saturno.mp3"
+                type="audio/mpeg"
+            />
+        </audio>
+
+        <!-- ============================================================
+     SEÇÃO 1 — ABERTURA
+     ============================================================ -->
+        <section class="section section--hero" id="hero">
+            <div class="hero__inner">
+                <div class="hero__sparkles" aria-hidden="true"></div>
+                <p class="hero__subtitle">
+                    Para a mulher que mudou completamente minha vida ❤️
+                </p>
+                <h1 class="hero__title">
+                    Feliz Dia dos Namorados,<br /><em>Giovanna.</em>
+                </h1>
+                <button class="btn-primary" id="btnStart">
+                    Começar nossa história
+                </button>
+            </div>
+            <div class="scroll-hint" aria-hidden="true">
+                <span></span>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 2 — NOSSA HISTÓRIA
+     ============================================================ -->
+        <section class="section section--story" id="story">
+            <div class="container">
+                <span class="eyebrow">Capítulo I</span>
+                <h2 class="section-title">O início da nossa história</h2>
+
+                <div class="story__grid">
+                    <div class="story__text reveal">
+                        <p>
+                            Tudo começou quando você apareceu como sugestão de
+                            amizade no Instagram. Eu vi sua foto e pensei:
+                            <strong
+                                >"essa é a mulher mais linda que eu já vi na
+                                minha vida."</strong
+                            >
+                        </p>
+
+                        <p>
+                            Na mesma hora comecei a te seguir. Você não me
+                            seguiu de volta, mas isso não me impediu de tentar
+                            me aproximar.
+                        </p>
+
+                        <p>
+                            Alguns dias depois respondi uma caixinha de
+                            perguntas sua. O que parecia ser apenas uma resposta
+                            qualquer acabou iniciando a conversa mais importante
+                            da minha vida.
+                        </p>
+
+                        <p>
+                            Conversamos durante semanas. Eu estava animado para
+                            te conhecer pessoalmente, mas você resolveu me dar
+                            trabalho e me enrolou por mais de um mês antes de
+                            aceitar sair comigo.
+                        </p>
+
+                        <p>
+                            Até que finalmente chegou o dia
+                            <strong>07 de julho de 2024</strong>.
+                        </p>
+
+                        <p>
+                            Nosso primeiro encontro foi exatamente como eu
+                            imaginava... ou melhor, foi ainda melhor. A conversa
+                            fluía de forma tão natural que parecia que já nos
+                            conhecíamos há anos.
+                        </p>
+
+                        <p>
+                            Quando chegou a hora de te deixar em casa, senti uma
+                            saudade que não fazia sentido para alguém que tinha
+                            acabado de passar apenas algumas horas ao seu lado.
+                            Naquele dia eu já sabia que você era diferente.
+                        </p>
+
+                        <p>
+                            Com o tempo vieram algumas descobertas que tornaram
+                            nossa história ainda mais especial:
+                        </p>
+
+                        <ul class="story__list">
+                            <li>Já estudamos no mesmo lugar.</li>
+                            <li>Tínhamos diversos amigos em comum.</li>
+                            <li>
+                                Seus pais conheciam minha mãe antes mesmo de eu
+                                nascer.
+                            </li>
+                        </ul>
+
+                        <p>
+                            E mesmo com tantas conexões, nossos caminhos nunca
+                            tinham se cruzado.
+                        </p>
+
+                        <p>
+                            Hoje eu tenho certeza de que nada disso foi por
+                            acaso. Deus estava preparando cada detalhe no tempo
+                            certo para que nossas histórias finalmente se
+                            encontrassem.
+                        </p>
+                    </div>
+
+                    <div class="story__visual reveal">
+                        <div class="story__card">
+                            <!-- Substitua por uma foto especial do começo da história -->
+                            <!-- <img src="fotos/historia.jpg" alt="Nossa história" /> -->
+                            <div class="story__placeholder">
+                                <span>💌</span>
+                                <small>07 • 07 • 2024</small>
+                            </div>
+                        </div>
+
+                        <div class="story__deco" aria-hidden="true">
+                            <span class="heart-float">♥</span>
+                            <span class="heart-float">♥</span>
+                            <span class="heart-float">♥</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 3 — LINHA DO TEMPO
+     Para adicionar fotos: descomente a tag <img> dentro de cada
+     .timeline__img e coloque o caminho correto.
+     ============================================================ -->
+        <section class="section section--timeline" id="timeline">
+            <div class="container">
+                <span class="eyebrow">Capítulo II</span>
+                <h2 class="section-title">Nossa linha do tempo</h2>
+
+                <div class="timeline">
+                    <!-- EVENTO 1 -->
+                    <div class="timeline__item reveal" data-side="left">
+                        <div class="timeline__dot">
+                            <span>💫</span>
+                        </div>
+                        <div class="timeline__card">
+                            <time class="timeline__date">07 / 07 / 2024</time>
+                            <h3 class="timeline__event">Nos conhecemos</h3>
+                            <p>Um deslize no Instagram que mudou tudo.</p>
+                            <div class="timeline__img">
+                                <div class="timeline__img">
+                                    <video
+                                        controls
+                                        playsinline
+                                        preload="metadata"
+                                    >
+                                        <source
+                                            src="./video/1Encontro.mp4"
+                                            type="video/mp4"
+                                        />
+                                        Seu navegador não suporta vídeos.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EVENTO 2 -->
+                    <div class="timeline__item reveal" data-side="right">
+                        <div class="timeline__dot">
+                            <span>💍</span>
+                        </div>
+                        <div class="timeline__card">
+                            <time class="timeline__date">29 / 09 / 2024</time>
+                            <h3 class="timeline__event">Pedido de namoro</h3>
+                            <p>O começo oficial da nossa história.</p>
+                            <div class="timeline__img">
+                                <img
+                                    src="./images/pedidoNamoro1.jpeg"
+                                    alt="Pedido de namoro"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EVENTO 3 -->
+                    <div class="timeline__item reveal" data-side="left">
+                        <div class="timeline__dot">
+                            <span>💎</span>
+                        </div>
+                        <div class="timeline__card">
+                            <time class="timeline__date">03 / 08 / 2025</time>
+                            <h3 class="timeline__event">Pedido de casamento</h3>
+                            <p>
+                                Quando eu soube que queria te escolher para
+                                sempre.
+                            </p>
+                            <div class="timeline__img">
+                                <img
+                                    src="./images/pedidoCasamento.jpeg
+            "
+                                    alt="Pedido de casamento"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EVENTO 4 -->
+                    <div class="timeline__item reveal" data-side="right">
+                        <div class="timeline__dot">
+                            <span>⚖️</span>
+                        </div>
+                        <div class="timeline__card">
+                            <time class="timeline__date">06 / 11 / 2025</time>
+                            <h3 class="timeline__event">Casamento civil</h3>
+                            <p>Na lei e no coração, para sempre juntos.</p>
+                            <div class="timeline__img">
+                                <img
+                                    src="./images/casamentoCivil.jpeg"
+                                    alt="Casamento civil"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EVENTO 5 -->
+                    <div class="timeline__item reveal" data-side="left">
+                        <div class="timeline__dot">
+                            <span>⛪</span>
+                        </div>
+                        <div class="timeline__card">
+                            <time class="timeline__date">28 / 01 / 2026</time>
+                            <h3 class="timeline__event">Casamento religioso</h3>
+                            <p>Diante de Deus e das pessoas que amamos.</p>
+                            <div class="timeline__img">
+                                <img
+                                    src="./images/Casamento1.jpeg"
+                                    alt="Casamento religioso"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 4 — GALERIA
+     Para adicionar fotos: substitua o conteúdo das .gallery__img
+     com tags <img src="fotos/..." alt="..." />
+     ============================================================ -->
+        <section class="section section--gallery" id="gallery">
+            <div class="container">
+                <span class="eyebrow">Capítulo III</span>
+                <h2 class="section-title">Nossa galeria</h2>
+
+                <!-- Abas de categorias -->
+                <div class="gallery__tabs">
+                    <button class="gallery__tab active" data-cat="encontro">
+                        Encontros
+                    </button>
+                    <button class="gallery__tab" data-cat="namoro">
+                        Pedido de namoro
+                    </button>
+                    <button class="gallery__tab" data-cat="casamento">
+                        Casamento
+                    </button>
+                    <button class="gallery__tab" data-cat="lua">
+                        Lua de mel
+                    </button>
+                    <button class="gallery__tab" data-cat="vida">
+                        Nossa vida juntos
+                    </button>
+                </div>
+
+                <div class="gallery__grid" id="galleryGrid">
+                    <!-- ===== CATEGORIA: PRIMEIRO ENCONTRO ===== -->
+                    <div class="gallery__item reveal" data-cat="encontro">
+                        <!-- Substitua pelo caminho real da foto -->
+                        <img
+                            src="./images/2Encontro.jpeg"
+                            alt="Segundo encontro"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Segundo encontro
+                        </div>
+                    </div>
+                    <div class="gallery__item reveal" data-cat="encontro">
+                        <img
+                            src="./images/3Encontro.jpeg"
+                            alt="Terceiro encontro"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Terceiro encontro
+                        </div>
+                    </div>
+                    <div class="gallery__item reveal" data-cat="encontro">
+                        <img
+                            src="./images/4Encontro.jpeg"
+                            alt="Quarto encontro"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Quarto encontro
+                        </div>
+                    </div>
+
+                    <!-- ===== CATEGORIA: PEDIDO DE NAMORO ===== -->
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="namoro"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/pedidoNamoro1.jpeg"
+                            alt="Pedido de namoro"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Pedido de namoro — foto 1
+                        </div>
+                    </div>
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="namoro"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/pedidoNamoro2.jpeg"
+                            alt="Pedido de namoro"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Pedido de namoro — foto 2
+                        </div>
+                    </div>
+
+                    <!-- ===== CATEGORIA: CASAMENTO ===== -->
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="casamento"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/Casamento1.jpeg"
+                            alt="Casamento"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Casamento — foto 1
+                        </div>
+                    </div>
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="casamento"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/Casamento2.jpeg"
+                            alt="Casamento"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Casamento — foto 2
+                        </div>
+                    </div>
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="casamento"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/casamentoCivil.jpeg"
+                            alt="Casamento"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Casamento — foto 3
+                        </div>
+                    </div>
+
+                    <!-- ===== CATEGORIA: LUA DE MEL ===== -->
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="lua"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/LuaDeMel1.jpeg"
+                            alt="Lua de mel"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Lua de mel — foto 1
+                        </div>
+                    </div>
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="lua"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/LuaDeMel2.jpeg"
+                            alt="Lua de mel"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Lua de mel — foto 2
+                        </div>
+                    </div>
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="lua"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/LuaDeMel3.jpeg"
+                            alt="Lua de mel"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Lua de mel — foto 3
+                        </div>
+                    </div>
+
+                    <!-- ===== CATEGORIA: NOSSA VIDA JUNTOS ===== -->
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="vida"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/juntos1.jpeg"
+                            alt="Nossa vida juntos"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Nossa vida juntos — foto 1
+                        </div>
+                    </div>
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="vida"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/juntos2.jpeg"
+                            alt="Nossa vida juntos"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Nossa vida juntos — foto 2
+                        </div>
+                    </div>
+                    <div
+                        class="gallery__item reveal"
+                        data-cat="vida"
+                        style="display: none"
+                    >
+                        <img
+                            src="./images/juntos3.jpeg"
+                            alt="Nossa vida juntos"
+                            class="gallery__img"
+                        />
+                        <div class="gallery__img img-placeholder">
+                            📸 Nossa vida juntos — foto 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <button class="lightbox__close" id="lbClose">✕</button>
+                <button class="lightbox__nav lightbox__prev" id="lbPrev">
+                    ❮
+                </button>
+                <div class="lightbox__img-wrap" id="lbImgWrap"></div>
+                <button class="lightbox__nav lightbox__next" id="lbNext">
+                    ❯
+                </button>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 5 — CONTADOR
+     ============================================================ -->
+        <section class="section section--counter" id="counter">
+            <div class="container">
+                <span class="eyebrow">Capítulo IV</span>
+                <h2 class="section-title">
+                    Quanto tempo já vivemos essa história
+                </h2>
+                <p class="counter__since">Desde 07 de julho de 2024</p>
+
+                <div class="counter__grid">
+                    <div class="counter__block reveal">
+                        <span class="counter__number" id="cDays">0</span>
+                        <span class="counter__label">Dias</span>
+                    </div>
+                    <div class="counter__block reveal">
+                        <span class="counter__number" id="cHours">0</span>
+                        <span class="counter__label">Horas</span>
+                    </div>
+                    <div class="counter__block reveal">
+                        <span class="counter__number" id="cMinutes">0</span>
+                        <span class="counter__label">Minutos</span>
+                    </div>
+                </div>
+
+                <p class="counter__note reveal">
+                    E cada minuto valeu a pena. ♥
+                </p>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 6 — CARTA
+     ============================================================ -->
+        <section class="section section--letter" id="letter">
+            <div class="container">
+                <span class="eyebrow">Capítulo V</span>
+                <h2 class="section-title">Uma carta para você</h2>
+
+                <div class="letter__paper reveal">
+                    <div class="letter__header">
+                        <span class="letter__wax">❤</span>
+                        <p class="letter__to">Para Giovanna,</p>
+                    </div>
+
+                    <div class="letter__body">
+                        <p>Meu amor,</p>
+
+                        <p>
+                            Eu poderia começar essa carta falando sobre como
+                            você é linda — e você <em>é</em> — mas isso seria
+                            muito simples para descrever o que você representa
+                            para mim. Você não apenas mudou minha vida. Você a
+                            reescreveu.
+                        </p>
+
+                        <p>
+                            Antes de você, eu tinha uma visão distorcida do que
+                            era namoro. Achava que relacionamentos eram
+                            complicados por natureza, que o amor com o tempo
+                            esfriava, que o casamento era uma obrigação e não
+                            uma escolha feita todos os dias. Você me provou que
+                            eu estava completamente errado.
+                        </p>
+
+                        <p>
+                            Você foi minha primeira namorada. Isso significa que
+                            você foi também a primeira pessoa que me ensinou o
+                            que é de verdade cuidar de alguém, estar presente,
+                            escolher e ser escolhido. E que presente a vida me
+                            deu, ter aprendido tudo isso com você.
+                        </p>
+
+                        <p>
+                            Lembro do nosso primeiro encontro como se fosse
+                            hoje. Quando eu te deixei em casa e entrei no carro,
+                            senti uma saudade que nunca tinha sentido antes — de
+                            alguém que eu mal conhecia, mas que já parecia parte
+                            de mim. Parecia que nos conhecíamos há anos. Parecia
+                            que era certo. Porque era.
+                        </p>
+
+                        <p>
+                            Desde então, o meu maior sonho ganhou um rosto. É o
+                            rosto que vejo do outro lado da cama de manhã. É a
+                            voz que eu quero ouvir quando estou triste. É a mão
+                            que quero segurar quando o mundo estiver pesado
+                            demais.
+                        </p>
+
+                        <p>
+                            Quero construir nossa família com você. Quero
+                            conhecer o mundo ao seu lado — cada praia, cada
+                            cidade, cada nascer do sol que ainda está nos
+                            esperando. Quero ver você ser mãe e me apaixonar por
+                            você mais uma vez. Quero criar nossos filhos juntos,
+                            ensinando eles a temer a Deus, a amar as pessoas e a
+                            nunca desistir.
+                        </p>
+
+                        <p>
+                            E em tudo isso, quero que a gente siga sempre os
+                            caminhos de Jesus. Porque foi Ele quem preparou essa
+                            história, foi Ele quem colocou você como sugestão
+                            naquele Instagram, foi Ele quem guardou dois
+                            caminhos que nunca se cruzaram até que o tempo fosse
+                            perfeito.
+                        </p>
+
+                        <p>
+                            Obrigado por alegrar cada um dos meus dias. Obrigado
+                            por ser exatamente quem você é. Obrigado por me
+                            amar.
+                        </p>
+
+                        <p>
+                            Eu te amo mais do que qualquer coisa que eu saiba
+                            expressar com palavras.
+                        </p>
+
+                        <p class="letter__sign">
+                            Com todo o meu amor,<br /><strong>Fabricio</strong>
+                            ❤️
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 7 — MOMENTOS ESPECIAIS
+     ============================================================ -->
+        <section class="section section--moments" id="moments">
+            <div class="container">
+                <span class="eyebrow">Capítulo VI</span>
+                <h2 class="section-title">
+                    Momentos que vou guardar para sempre
+                </h2>
+
+                <div class="moments__grid">
+                    <div class="moment__card reveal">
+                        <div class="moment__icon">✈️</div>
+                        <h3>Nossa primeira viagem</h3>
+                        <p>
+                            Cada primeira vez com você é especial. A primeira
+                            viagem foi a prova de que viajar ao seu lado vai ser
+                            sempre a minha parte favorita da vida.
+                        </p>
+                        <!-- <img src="fotos/viagem.jpg" alt="Primeira viagem" /> -->
+                    </div>
+
+                    <div class="moment__card reveal">
+                        <div class="moment__icon">🌊</div>
+                        <h3>Lua de mel em Fortaleza</h3>
+                        <p>
+                            O Beach Park, o mar, você na minha frente sorrindo —
+                            esse é o tipo de memória que a gente quer viver em
+                            loop. Fortaleza foi perfeita porque você estava lá.
+                        </p>
+                        <!-- <img src="fotos/fortaleza.jpg" alt="Fortaleza" /> -->
+                    </div>
+
+                    <div class="moment__card reveal">
+                        <div class="moment__icon">🍬</div>
+                        <h3>As vendas de doces</h3>
+                        <p>
+                            Quantas horas nós passamos juntos produzindo,
+                            embalando, entregando. Havia noites difíceis. Havia
+                            dias em que as coisas não saíam como planejado.
+                            Havia momentos em que você chorava — e mesmo assim
+                            você nunca desistiu.
+                        </p>
+                        <p>
+                            <em
+                                >Ver você assim, com tanta força e determinação
+                                para realizar nosso sonho, fez eu me apaixonar
+                                ainda mais por você. Você é admirável.</em
+                            >
+                        </p>
+                        <!-- <img src="fotos/doces.jpg" alt="Vendas de doces" /> -->
+                    </div>
+
+                    <div class="moment__card moment__card--wide reveal">
+                        <div class="moment__icon">💍</div>
+                        <h3>O caminho até o altar</h3>
+                        <p>
+                            Houve momentos difíceis nessa jornada. Mas cada
+                            obstáculo só nos deixou mais fortes. E quando eu te
+                            vi chegar até mim no dia do nosso casamento, tudo
+                            fez sentido. Todo esforço, cada lágrima, cada
+                            dificuldade valeu — porque te valeu.
+                        </p>
+                        <!-- <img src="fotos/altar.jpg" alt="Caminho até o altar" /> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 8 — NOSSA MIA (a cachorra)
+     Para adicionar fotos da Mia: descomente as tags <img>
+     ============================================================ -->
+        <section class="section section--mia" id="mia">
+            <div class="container">
+                <span class="eyebrow">Capítulo VII</span>
+                <h2 class="section-title">Nossa Mia 🐾</h2>
+
+                <div class="mia__story reveal">
+                    <p>
+                        Durante as vendas de doces para o casamento, fomos à
+                        praia. E foi lá que apareceu uma Spitz Alemão do nada —
+                        pequena, fofa, com aquele olhar que derreteria qualquer
+                        coração.
+                    </p>
+                    <p>
+                        Você se apaixonou imediatamente. Começou a me convencer
+                        com aquele sorriso que eu já sabia que não conseguiria
+                        resistir. E claro — acabamos comprando.
+                    </p>
+                    <p>
+                        Foi uma das melhores decisões da nossa vida. Mia não é
+                        só uma cachorra. Ela é parte da nossa família.
+                    </p>
+                </div>
+
+                <div class="mia__gallery reveal">
+                    <!-- Coloque as fotos da Mia aqui -->
+                    <img
+                        src="./images/Mia2.jpeg"
+                        alt="Nossa Mia"
+                        class="mia__photo"
+                    />
+                    <img
+                        src="./images/Mia1.jpeg"
+                        alt="Nossa Mia"
+                        class="mia__photo"
+                    />
+                    <img
+                        src="./images/Mia3.jpeg"
+                        alt="Nossa Mia"
+                        class="mia__photo"
+                    />
+                    <img
+                        src="./images/Mia4.jpeg"
+                        alt="Nossa Mia"
+                        class="mia__photo"
+                    />
+                </div>
+
+                <div class="mia__paw reveal">
+                    <div class="mia__pain-card">
+                        <span class="mia__pain-icon">🩺</span>
+                        <div>
+                            <h4>26 de janeiro de 2026</h4>
+                            <p>
+                                Dois dias antes do nosso casamento religioso, a
+                                Mia quebrou a pata. Foi uma das maiores dores
+                                que já sentimos — e ao mesmo tempo foi quando
+                                percebemos o quanto ela já era parte de nós.
+                                Felizmente ela se recuperou. E estar com ela nos
+                                lembrou que família cuida, família não abandona,
+                                e que o amor não tem tamanho — nem peso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 9 — CARTAS SECRETAS
+     ============================================================ -->
+        <section class="section section--envelopes" id="envelopes">
+            <div class="container">
+                <span class="eyebrow">Capítulo VIII</span>
+                <h2 class="section-title">Cartas secretas para você</h2>
+                <p class="envelopes__sub">Clique em cada envelope para abrir</p>
+
+                <div class="envelopes__grid">
+                    <!-- CARTA 1 -->
+                    <div class="envelope" data-letter="1">
+                        <div class="envelope__front">
+                            <div class="envelope__flap"></div>
+                            <div class="envelope__body">
+                                <span class="envelope__wax">❤</span>
+                                <p class="envelope__label">Carta 1</p>
+                                <small
+                                    >O que senti no nosso primeiro
+                                    encontro</small
+                                >
+                            </div>
+                        </div>
+                        <div class="envelope__letter">
+                            <div class="envelope__letter-inner">
+                                <h4>O que senti no nosso primeiro encontro</h4>
+                                <p>
+                                    Eu lembro que estava nervoso. De um jeito
+                                    bom — aquele frio na barriga que a gente
+                                    sente quando sabe que algo importante está
+                                    acontecendo.
+                                </p>
+                                <p>
+                                    Quando você chegou, eu pensei: ela é ainda
+                                    mais linda pessoalmente. E quando você
+                                    começou a falar, eu esqueci o nervosismo
+                                    completamente. Você é fácil de estar junto.
+                                    É fácil rir com você. É fácil ser eu mesmo
+                                    com você.
+                                </p>
+                                <p>
+                                    Naquele dia, quando te levei para casa,
+                                    entrei no carro e senti aquela saudade
+                                    estranha — de alguém que eu mal conhecia.
+                                    Foi ali que eu soube: era você.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARTA 2 -->
+                    <div class="envelope" data-letter="2">
+                        <div class="envelope__front">
+                            <div class="envelope__flap"></div>
+                            <div class="envelope__body">
+                                <span class="envelope__wax">❤</span>
+                                <p class="envelope__label">Carta 2</p>
+                                <small>O que mais admiro em você</small>
+                            </div>
+                        </div>
+                        <div class="envelope__letter">
+                            <div class="envelope__letter-inner">
+                                <h4>O que mais admiro em você</h4>
+                                <p>
+                                    Sua fé. Em Deus, em nós, na vida. Mesmo nos
+                                    momentos mais difíceis, você sempre
+                                    acreditou que tudo iria dar certo — e tinha
+                                    razão.
+                                </p>
+                                <p>
+                                    Sua força. Ver você trabalhar, lutar, nunca
+                                    desistir mesmo quando estava cansada e com o
+                                    coração apertado — isso é algo que eu jamais
+                                    vou esquecer.
+                                </p>
+                                <p>
+                                    Sua bondade. A forma como você ama as
+                                    pessoas, como você cuida, como você está
+                                    sempre presente. Você tem um coração raro. E
+                                    eu sou o homem mais sortudo do mundo por ser
+                                    amado por ele.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARTA 3 -->
+                    <div class="envelope" data-letter="3">
+                        <div class="envelope__front">
+                            <div class="envelope__flap"></div>
+                            <div class="envelope__body">
+                                <span class="envelope__wax">❤</span>
+                                <p class="envelope__label">Carta 3</p>
+                                <small>Meu sonho para nossa família</small>
+                            </div>
+                        </div>
+                        <div class="envelope__letter">
+                            <div class="envelope__letter-inner">
+                                <h4>Meu sonho para nossa família</h4>
+                                <p>
+                                    Quero que nossos filhos cresçam sabendo o
+                                    quanto foram desejados. Quero que eles vejam
+                                    no nosso amor uma referência de que o amor
+                                    de verdade existe — e que vale lutar por
+                                    ele.
+                                </p>
+                                <p>
+                                    Quero que a nossa casa seja um lugar de paz,
+                                    de risadas, de fé e de aconchego. Um lar que
+                                    as pessoas entram e sentem que ali moram
+                                    pessoas felizes.
+                                </p>
+                                <p>
+                                    Quero crescer velho com você, olhar para
+                                    trás e dizer: valeu cada dia. Cada segundo.
+                                    Cada escolha.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARTA 4 -->
+                    <div class="envelope" data-letter="4">
+                        <div class="envelope__front">
+                            <div class="envelope__flap"></div>
+                            <div class="envelope__body">
+                                <span class="envelope__wax">❤</span>
+                                <p class="envelope__label">Carta 4</p>
+                                <small>Como imagino nós daqui a 10 anos</small>
+                            </div>
+                        </div>
+                        <div class="envelope__letter">
+                            <div class="envelope__letter-inner">
+                                <h4>Como imagino nós daqui a 10 anos</h4>
+                                <p>
+                                    Daqui a 10 anos, imagino a gente numa casa
+                                    que construímos juntos. Com filhos correndo
+                                    pelo corredor. Com a Mia (ou seus filhos!)
+                                    no canto favorito dela.
+                                </p>
+                                <p>
+                                    Você ainda me olhando com aquele sorriso que
+                                    desfaz qualquer dia ruim. Eu ainda
+                                    escolhendo você todo dia — com ainda mais
+                                    certeza do que hoje.
+                                </p>
+                                <p>
+                                    A gente vai ter viajado para lugares que
+                                    ainda nem imaginamos. Vamos ter superado
+                                    coisas que ainda não aconteceram. E em cada
+                                    uma delas, estaremos juntos. Porque é assim
+                                    que eu quero viver — com você, para sempre.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 10 — QUALIDADES
+     ============================================================ -->
+        <section class="section section--qualities" id="qualities">
+            <div class="container">
+                <span class="eyebrow">Capítulo IX</span>
+                <h2 class="section-title">
+                    Por que eu me apaixono por você todos os dias
+                </h2>
+
+                <div class="qualities__grid">
+                    <div class="quality__card reveal">
+                        <div class="quality__icon">✨</div>
+                        <h3>Sua beleza</h3>
+                        <p>
+                            A beleza que vejo em você vai muito além do que os
+                            olhos alcançam — ela está em cada gesto, cada
+                            sorriso, cada forma que você existe no mundo.
+                        </p>
+                    </div>
+
+                    <div class="quality__card reveal">
+                        <div class="quality__icon">💛</div>
+                        <h3>Seu coração</h3>
+                        <p>
+                            Você ama de um jeito que transforma as pessoas. Seu
+                            coração é generoso, bonito e cheio de luz.
+                        </p>
+                    </div>
+
+                    <div class="quality__card reveal">
+                        <div class="quality__icon">🙏</div>
+                        <h3>Sua fé em Deus</h3>
+                        <p>
+                            Ver você buscar a Deus, orar, confiar — isso me
+                            fortalece todos os dias. Sua fé é uma das coisas
+                            mais bonitas que existem em você.
+                        </p>
+                    </div>
+
+                    <div class="quality__card reveal">
+                        <div class="quality__icon">🔥</div>
+                        <h3>Sua determinação</h3>
+                        <p>
+                            Quando você decide algo, não tem obstáculo que te
+                            pare. Você vai até o fim. Sempre.
+                        </p>
+                    </div>
+
+                    <div class="quality__card reveal">
+                        <div class="quality__icon">🌈</div>
+                        <h3>Sua confiança</h3>
+                        <p>
+                            Mesmo quando eu duvido, você crê. Você me ensinou
+                            que acreditar no melhor não é ingenuidade — é força.
+                        </p>
+                    </div>
+
+                    <div class="quality__card reveal">
+                        <div class="quality__icon">🌱</div>
+                        <h3>Seu desejo de crescer</h3>
+                        <p>
+                            Você nunca está satisfeita em ficar parada. Sempre
+                            quer aprender mais, ser mais, dar mais. Isso me
+                            inspira todos os dias.
+                        </p>
+                    </div>
+
+                    <div class="quality__card reveal">
+                        <div class="quality__icon">💪</div>
+                        <h3>Sua força</h3>
+                        <p>
+                            Você já passou por mais do que muita gente sabe. E
+                            saiu de cada desafio de pé, mais bonita e mais
+                            inteira. Você é incrível.
+                        </p>
+                    </div>
+
+                    <div class="quality__card reveal">
+                        <div class="quality__icon">❤️</div>
+                        <h3>Seu amor</h3>
+                        <p>
+                            O jeito que você ama é diferente. É presente, é
+                            cuidadoso, é real. Ser amado por você é o maior
+                            privilégio da minha vida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SEÇÃO 11 — SURPRESA FINAL
+     ============================================================ -->
+        <section class="section section--finale" id="finale">
+            <canvas id="fireworks-canvas"></canvas>
+            <div class="finale__inner">
+                <p class="finale__line reveal-finale">
+                    Você foi meu primeiro amor.
+                </p>
+                <p class="finale__line reveal-finale">É meu maior amor.</p>
+                <p class="finale__line reveal-finale">
+                    E continuará sendo meu amor por toda a vida.
+                </p>
+                <div
+                    class="finale__hearts"
+                    aria-hidden="true"
+                    id="finaleHearts"
+                ></div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     RODAPÉ
+     ============================================================ -->
+        <footer class="footer">
+            <p>Obrigado por viver essa história comigo.</p>
+            <p class="footer__sign">Com amor, <strong>Fabricio</strong> ❤️</p>
+        </footer>
+
+        <script src="./script/script.js"></script>
+    </body>
+</html>
