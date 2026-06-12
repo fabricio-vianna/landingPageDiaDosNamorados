@@ -116,8 +116,8 @@ function initGallery() {
     const allItems = document.querySelectorAll(".gallery__item");
 
     tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-            // Atualiza tab ativo
+        function handleTabSelect(e) {
+            e.stopPropagation();
             tabs.forEach((t) => t.classList.remove("active"));
             tab.classList.add("active");
 
@@ -130,7 +130,17 @@ function initGallery() {
                     item.style.display = "none";
                 }
             });
-        });
+        }
+
+        tab.addEventListener("click", handleTabSelect);
+        tab.addEventListener(
+            "touchend",
+            (e) => {
+                e.preventDefault(); // só aqui, só neste elemento
+                handleTabSelect(e);
+            },
+            { passive: false },
+        );
     });
 
     /* ----- LIGHTBOX ----- */
@@ -266,24 +276,43 @@ function initEnvelopes() {
         }
 
         // Clique no envelope (frente) para abrir
-        env.querySelector(".envelope__front")?.addEventListener(
-            "click",
+        function handleEnvelopeOpen(e) {
+            e.stopPropagation();
+            envelopes.forEach((other) => {
+                if (other !== env) other.classList.remove("open");
+            });
+            env.classList.toggle("open");
+        }
+
+        const front = env.querySelector(".envelope__front");
+        front?.addEventListener("click", handleEnvelopeOpen);
+        front?.addEventListener(
+            "touchend",
             (e) => {
-                e.stopPropagation();
-                // Fecha todos os outros
-                envelopes.forEach((other) => {
-                    if (other !== env) other.classList.remove("open");
-                });
-                env.classList.toggle("open");
+                e.preventDefault();
+                handleEnvelopeOpen(e);
             },
+            { passive: false },
         );
 
         // Clique no botão de fechar
-        env.addEventListener("click", (e) => {
+        function handleEnvelopeClose(e) {
             if (e.target.classList.contains("envelope__close")) {
+                e.stopPropagation();
                 env.classList.remove("open");
             }
-        });
+        }
+        env.addEventListener("click", handleEnvelopeClose);
+        env.addEventListener(
+            "touchend",
+            (e) => {
+                if (e.target.classList.contains("envelope__close")) {
+                    e.preventDefault();
+                    handleEnvelopeClose(e);
+                }
+            },
+            { passive: false },
+        );
     });
 
     // Fecha envelope ao clicar fora
@@ -306,7 +335,7 @@ function initMusic() {
 
     let isPlaying = false;
 
-    musicBtn.addEventListener("click", async () => {
+    async function handleMusicToggle(e) {
         if (isPlaying) {
             bgMusic.pause();
             isPlaying = false;
@@ -319,11 +348,20 @@ function initMusic() {
                 musicBtn.classList.add("playing");
                 musicBtn.querySelector("span").textContent = "Pausar música";
             } catch {
-                // Autoplay bloqueado — usuário precisará clicar novamente
                 console.info("Reprodução de áudio bloqueada pelo navegador.");
             }
         }
-    });
+    }
+
+    musicBtn.addEventListener("click", handleMusicToggle);
+    musicBtn.addEventListener(
+        "touchend",
+        (e) => {
+            e.preventDefault(); // necessário para o iOS acionar o play de áudio
+            handleMusicToggle(e);
+        },
+        { passive: false },
+    );
 
     // Quando o áudio termina (não deveria acontecer com loop, mas por garantia)
     bgMusic.addEventListener("ended", () => {
@@ -648,17 +686,8 @@ function initFinaleHearts() {
 
 function initMobileOptimizations() {
     if (isTouchDevice()) {
-        // Adiciona classe ao body para selectors CSS específicos de touch
         document.body.classList.add("is-touch");
-
-        // Evita cliques duplos em iOS
-        document.addEventListener(
-            "touchend",
-            (e) => {
-                e.preventDefault();
-            },
-            { passive: false },
-        );
+        // Removido: e.preventDefault() global que bloqueava todos os cliques no iOS
     }
 }
 
